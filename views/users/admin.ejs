@@ -1,0 +1,25 @@
+<%- include('../partials/header'); -%>
+
+
+<div class="container mt-5">
+    <h1 class="text-center">Admin Panel</h1>
+    <%- include('../partials/flashMessages'); -%>
+    
+    <form class="mt-5" action="/auth/admin" method="POST">
+        <div class="form-group">
+          <label for="inputAddress">Email</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Password</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+        </div>
+        <div class="form-row">
+        </div>
+      
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+      </form>
+</div>
+
+
+<%- include('../partials/footer'); -%>

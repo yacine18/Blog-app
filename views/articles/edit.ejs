@@ -1,0 +1,21 @@
+<%- include('../partials/header'); -%>
+<%- include('../partials/navbar'); -%>
+
+
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Edit Article</h2>
+  <form action="<%='/blog/update/'+article.id%>" method="POST">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" value="<%= article.title%>" name="title" required>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea class="form-control" id="description" value="<%= article.description%>" name="description" rows="3" ></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+
+
+<%- include('../partials/footer'); -%>

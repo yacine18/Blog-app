@@ -1,0 +1,28 @@
+<%- include('../partials/header'); -%>
+<%- include('../partials/navbar'); -%>
+
+
+<div class="container mt-4">
+  <div class="row ">
+    <div class="div col-sm">
+      <h1 class="card-body"><%= article.title%></h1>
+    <a href="<%= '/blog/delete/' + article.id %>" class=" btn btn-outline-danger">Remove Article</a>
+    <a href="<%= '/blog/update/' + article.id %>" class="btn btn-outline-warning">Edit</a>
+    </div>
+    
+  </div>
+  <h6 class="card-body mb-2 text-muted"><%= article.createdAt.toDateString()%></h6>
+  <div class="div card-body">
+    <%= article.description%>
+  </div>
+  
+
+  
+</div>
+
+
+
+
+
+
+<%- include('../partials/footer'); -%>

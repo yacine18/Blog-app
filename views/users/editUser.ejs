@@ -1,0 +1,43 @@
+<%- include('../partials/header'); -%>
+<%- include('../partials/DashboardNav'); -%>
+
+
+<div class="container mt-5">
+    <h1 class="text-center mt-3">Update User</h1>
+    <%- include('../partials/flashMessages'); -%>
+    <form class="mt-5" action="<%= '/auth/dashboard/users/edit/' + user.id %>" method="POST">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">First Name</label>
+            <input type="text" class="form-control" id="fname" name="fname" value="<%= user.fname  %>" placeholder="First Name" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Last Name</label>
+            <input type="text" class="form-control" id="lname" name="lname" value="<%= user.lname  %>" placeholder="Last Name" required >
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Email</label>
+          <input type="email" class="form-control" id="email" name="email" value="<%= user.email  %>" placeholder="Email" >
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Password</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Password" >
+        </div>
+        <div class="form-group">
+            <label for="inputAddress2">Admin</label>
+            <select class="form-control" name="isAdmin" id="isAdmin">
+                <option value="false" >False</option>
+                <option value="true" >True</option>
+            </select>
+          </div>
+        <div class="form-row">
+        </div>
+        
+        <button type="submit" class="btn btn-primary btn-block">Update User</button>
+      </form>
+</div>
+
+
+
+<%- include('../partials/footer'); -%>
