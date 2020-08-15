@@ -20,7 +20,7 @@ app.set('view engine', 'ejs')
 
 // session and flash config .
 app.use(session({
-    secret: process.env.SESSION_SECRET,
+    secret: process.env.SESSION_SECRET || "secret",
     resave: false,
     saveUninitialized: false,
     cookie: {maxAge: 60000 * 5}
