@@ -20,13 +20,12 @@ app.set('view engine', 'ejs')
 
 // session and flash config .
 app.use(session({
-    secret: process.env.SESSION_SECRET || "secret",
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     cookie: {maxAge: 60000 * 5}
 }))
 app.use(flash())
-
 
 //config passport
 app.use(passport.initialize())
